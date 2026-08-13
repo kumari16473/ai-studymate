@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI StudyMate</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">🤖 AI StudyMate</div>
+            <p>Your Personal AI Study Assistant</p>
+        </header>
+
+        <main>
+
+            <section class="input-card">
+                <h2>📚 Study Assistant</h2>
+
+                <label for="topic">Enter your topic or notes</label>
+
+                <textarea
+                    id="topic"
+                    placeholder="Example: Explain the OSI model in computer networks..."
+                ></textarea>
+
+                <div class="controls">
+
+                    <div>
+                        <label for="language">Language</label>
+                        <select id="language">
+                            <option value="English">English</option>
+                            <option value="Tamil">Tamil</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label for="action">Study Action</label>
+                        <select id="action">
+                            <option value="summary">Summarize</option>
+                            <option value="explain">Explain Simply</option>
+                            <option value="quiz">Generate Quiz</option>
+                            <option value="points">Key Points</option>
+                        </select>
+                    </div>
+
+                </div>
+
+                <button id="generateBtn" onclick="generateAnswer()">
+                    ✨ Generate
+                </button>
+
+            </section>
+
+
+            <section class="response-card">
+
+                <div class="response-header">
+                    <h2>🧠 AI Response</h2>
+                    <button onclick="clearResponse()">Clear</button>
+                </div>
+
+                <div id="response">
+                    <div class="welcome">
+                        <span>🤖</span>
+                        <h3>Your AI answer will appear here</h3>
+                        <p>
+                            Enter a topic and select what you want to learn.
+                        </p>
+                    </div>
+                </div>
+
+            </section>
+
+        </main>
+
+        <footer>
+            <p>AI StudyMate • Day 7 Project 🚀</p>
+        </footer>
+
+    </div>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
