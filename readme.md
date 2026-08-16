@@ -1,59 +1,59 @@
-# 🤖 AI StudyMate
+# AI StudyMate 📚🤖
 
-AI StudyMate is an AI-based study assistant web application designed to help students learn, revise, and understand academic topics easily.
-
-The application allows students to enter a topic or notes and choose different study options such as summarization, simple explanation, quiz generation, and key points.
-
----
+AI StudyMate is an AI-powered learning assistant designed to help students study smarter, organize their learning, and improve their exam preparation.
 
 ## 🚀 Features
 
-- 📚 Enter study topics or notes
-- 📝 Generate topic summaries
-- 🧠 Explain difficult topics in simple language
-- ❓ Generate quiz questions
-- 📌 Extract important key points
-- 🌐 English and Tamil language support
-- 🎨 Modern and responsive user interface
-- ⚡ Fast and beginner-friendly web application
-
----
+* 📖 AI-powered study assistance
+* 📝 Generate study notes and summaries
+* ❓ Practice with quiz questions
+* 🎯 Topic-based learning
+* 📊 Track learning progress
+* 💡 Get quick explanations for difficult concepts
+* 📱 Simple and student-friendly interface
 
 ## 🛠️ Technologies Used
 
-### Frontend
-
-- HTML5
-- CSS3
-- JavaScript
-
-### AI
-
-- AI API integration
-- Prompt-based response generation
-
-### Tools
-
-- Visual Studio Code
-- Git
-- GitHub
-
----
+* HTML
+* CSS
+* JavaScript
+* AI / Generative AI
+* Git & GitHub
 
 ## 📂 Project Structure
 
-AI-StudyMate/
-
+```text
+ai-studymate/
+│
 ├── index.html
 ├── style.css
 ├── script.js
 └── README.md
+```
 
----
+## ⚙️ How to Run
 
-## 💻 Installation
+1. Clone the repository.
+2. Open the project folder in VS Code.
+3. Open `index.html` in your browser.
+4. Start using AI StudyMate.
 
-### 1. Clone the repository
+## 🎯 Project Goal
 
-```bash
-git clone YOUR_GITHUB_REPOSITORY_URL
+The goal of AI StudyMate is to provide students with a simple and intelligent study companion that makes learning, revision, and exam preparation easier and more effective.
+
+## 🔮 Future Enhancements
+
+* AI chatbot integration
+* Personalized study plans
+* Voice-based learning
+* Progress analytics
+* Flashcard generation
+* Exam preparation mode
+* Dark mode
+
+## 👨‍💻 Project
+
+**AI StudyMate** — Smart learning assistant for students.
+
+Built with ❤️ using modern web technologies.
