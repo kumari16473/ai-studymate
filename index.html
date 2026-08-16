@@ -1,90 +1,185 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI StudyMate</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>AI StudyMate</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      min-height: 100vh;
+      background: #f5f7fb;
+      color: #1f2937;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      width: 100%;
+      max-width: 850px;
+      background: white;
+      border-radius: 20px;
+      padding: 35px;
+      box-shadow: 0 10px 35px rgba(0, 0, 0, 0.08);
+    }
+
+    .header {
+      text-align: center;
+      margin-bottom: 30px;
+    }
+
+    .header h1 {
+      font-size: 34px;
+      color: #2563eb;
+      margin-bottom: 10px;
+    }
+
+    .header p {
+      color: #6b7280;
+      font-size: 16px;
+    }
+
+    .question-area {
+      display: flex;
+      gap: 12px;
+      margin-bottom: 25px;
+    }
+
+    #question {
+      flex: 1;
+      padding: 16px;
+      border: 2px solid #e5e7eb;
+      border-radius: 12px;
+      font-size: 16px;
+      outline: none;
+    }
+
+    #question:focus {
+      border-color: #2563eb;
+    }
+
+    #askButton {
+      padding: 0 25px;
+      border: none;
+      border-radius: 12px;
+      background: #2563eb;
+      color: white;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    #askButton:hover {
+      background: #1d4ed8;
+    }
+
+    #askButton:disabled {
+      background: #93c5fd;
+      cursor: not-allowed;
+    }
+
+    .answer-container {
+      background: #f8fafc;
+      border: 1px solid #e5e7eb;
+      border-radius: 15px;
+      padding: 25px;
+      min-height: 220px;
+    }
+
+    .answer-title {
+      font-size: 18px;
+      font-weight: bold;
+      margin-bottom: 15px;
+      color: #111827;
+    }
+
+    #answer {
+      white-space: pre-wrap;
+      line-height: 1.7;
+      font-size: 16px;
+      color: #374151;
+    }
+
+    .footer {
+      text-align: center;
+      margin-top: 25px;
+      color: #9ca3af;
+      font-size: 13px;
+    }
+
+    @media (max-width: 650px) {
+      .container {
+        padding: 22px;
+      }
+
+      .header h1 {
+        font-size: 28px;
+      }
+
+      .question-area {
+        flex-direction: column;
+      }
+
+      #askButton {
+        padding: 14px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
-    <div class="container">
+  <div class="container">
 
-        <header>
-            <div class="logo">🤖 AI StudyMate</div>
-            <p>Your Personal AI Study Assistant</p>
-        </header>
+    <div class="header">
+      <h1>🤖 AI StudyMate</h1>
+      <p>Ask any question and get an AI-powered answer.</p>
+    </div>
 
-        <main>
+    <div class="question-area">
 
-            <section class="input-card">
-                <h2>📚 Study Assistant</h2>
+      <input
+        id="question"
+        type="text"
+        placeholder="Ask anything..."
+        autocomplete="off"
+      />
 
-                <label for="topic">Enter your topic or notes</label>
-
-                <textarea
-                    id="topic"
-                    placeholder="Example: Explain the OSI model in computer networks..."
-                ></textarea>
-
-                <div class="controls">
-
-                    <div>
-                        <label for="language">Language</label>
-                        <select id="language">
-                            <option value="English">English</option>
-                            <option value="Tamil">Tamil</option>
-                        </select>
-                    </div>
-
-                    <div>
-                        <label for="action">Study Action</label>
-                        <select id="action">
-                            <option value="summary">Summarize</option>
-                            <option value="explain">Explain Simply</option>
-                            <option value="quiz">Generate Quiz</option>
-                            <option value="points">Key Points</option>
-                        </select>
-                    </div>
-
-                </div>
-
-                <button id="generateBtn" onclick="generateAnswer()">
-                    ✨ Generate
-                </button>
-
-            </section>
-
-
-            <section class="response-card">
-
-                <div class="response-header">
-                    <h2>🧠 AI Response</h2>
-                    <button onclick="clearResponse()">Clear</button>
-                </div>
-
-                <div id="response">
-                    <div class="welcome">
-                        <span>🤖</span>
-                        <h3>Your AI answer will appear here</h3>
-                        <p>
-                            Enter a topic and select what you want to learn.
-                        </p>
-                    </div>
-                </div>
-
-            </section>
-
-        </main>
-
-        <footer>
-            <p>AI StudyMate • Day 7 Project 🚀</p>
-        </footer>
+      <button id="askButton">
+        Ask AI
+      </button>
 
     </div>
 
-    <script src="script.js"></script>
+    <div class="answer-container">
+
+      <div class="answer-title">
+        💡 AI Answer
+      </div>
+
+      <div id="answer">
+        Ask a question to get your answer here.
+      </div>
+
+    </div>
+
+    <div class="footer">
+      AI StudyMate • Your personal AI learning assistant
+    </div>
+
+  </div>
+
+  <script src="script.js"></script>
 
 </body>
 </html>
